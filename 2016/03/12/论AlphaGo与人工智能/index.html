@@ -1,0 +1,696 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="AlphaGo,人工智能," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="在2016年3月9日这一天，AlphaGo打败了李世乭。这一天有可能成为人类历史的一个转折点。  
+我是在当天晚上在学校从老师那里得到信息的，当老师告诉我们人工智能（Artificial Intelligence，简称AI）AlphaGo在当天击败了拥有人类围棋最高水平的李世乭时，我便开始抑制不住自己开始发抖，因为这一切实在是太恐怖了。  
+围棋是人类历史上最复杂的智力游戏，没有之一，随着AI的发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="论AlphaGo与人工智能">
+<meta property="og:url" content="http://yoursite.com/2016/03/12/论AlphaGo与人工智能/index.html">
+<meta property="og:site_name" content="MuTangChun's Universe">
+<meta property="og:description" content="在2016年3月9日这一天，AlphaGo打败了李世乭。这一天有可能成为人类历史的一个转折点。  
+我是在当天晚上在学校从老师那里得到信息的，当老师告诉我们人工智能（Artificial Intelligence，简称AI）AlphaGo在当天击败了拥有人类围棋最高水平的李世乭时，我便开始抑制不住自己开始发抖，因为这一切实在是太恐怖了。  
+围棋是人类历史上最复杂的智力游戏，没有之一，随着AI的发">
+<meta property="og:updated_time" content="2016-09-24T13:54:35.184Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="论AlphaGo与人工智能">
+<meta name="twitter:description" content="在2016年3月9日这一天，AlphaGo打败了李世乭。这一天有可能成为人类历史的一个转折点。  
+我是在当天晚上在学校从老师那里得到信息的，当老师告诉我们人工智能（Artificial Intelligence，简称AI）AlphaGo在当天击败了拥有人类围棋最高水平的李世乭时，我便开始抑制不住自己开始发抖，因为这一切实在是太恐怖了。  
+围棋是人类历史上最复杂的智力游戏，没有之一，随着AI的发">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6299894756084303000,
+      author: 'MuTangChun'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/03/12/论AlphaGo与人工智能/"/>
+
+  <title> 论AlphaGo与人工智能 | MuTangChun's Universe </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">MuTangChun's Universe</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Welcome to MuTangChun's World!</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                论AlphaGo与人工智能
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-12T13:21:00+08:00" content="2016-03-12">
+              2016-03-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/杂文随笔/" itemprop="url" rel="index">
+                    <span itemprop="name">杂文随笔</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在2016年3月9日这一天，AlphaGo打败了李世乭。这一天有可能成为人类历史的一个转折点。  </p>
+<p>我是在当天晚上在学校从老师那里得到信息的，当老师告诉我们人工智能（Artificial Intelligence，简称AI）AlphaGo在当天击败了拥有人类围棋最高水平的李世乭时，我便开始抑制不住自己开始发抖，因为这一切实在是太恐怖了。  </p>
+<p>围棋是人类历史上最复杂的智力游戏，没有之一，随着AI的发展，人类在各种棋类运动上被机器人击败。但在此之前从来就没有机器人能够在围棋这一方面击败人类，这是人类十分引以为豪的事情，但这一切都被改变了。  </p>
+<p>让我们通过数据来分析一下围棋的复杂程度，计算机总是通过枚举法来解决问题，但是对于围棋来说，如果要用枚举法来解决如何落子，那么计算量将会达到10的173次方。也许有人认为这个数字很平常，但我将会告诉你这个数字有多么庞大，庞大到可怕。宇宙中的所有的星球大约有7×10的22次方个，那么大约要1.42×10的151次方个宇宙的星球的数量才能达到这个数字；宇宙中的原子数目大约是10的70次方个，那么10的103次方个宇宙中的所有原子加起来才能达到这个数字。<br><a id="more"></a></p>
+<p>这么庞大的计算量，就算是倾尽人类所有的资源都远远不能能达到，那么AlphaGo是如何做到打败李世乭的呢？答案是它是会思考的，它是会学习的！当我知道这个的时候，我的心就像受到了强烈的撞击，觉得这一切都被颠覆了。  </p>
+<p>AlphaGo与每一个围棋选手进行博弈，它就会记下每一步棋的走法，并且学习每一个棋手的战略和风格，然后并利用这些战略和风格去对付其他的棋手。也就是说，它与别人下棋越多，它学到的东西就越多，它的围棋水平就越高。AlphaGo掌握了一定的学习能力，它就是在这样的学习中获得成长，进一步变得越来越强大。我敢断言，李世乭一局都赢不了！  </p>
+<p>我曾经在玩《弹丸论破》（推理游戏，游戏本身与AI无关）的时候，里面有一名程序员的角色，剧情中提到他仅凭一个人就写出了能独立通过学习来强大自己的AI程序，名为Alter Ego。当时我对这个只是一笑而过，认为这根本就不可能，觉得这个游戏夸张也该有个限度。但事实上AlphaGo比这个游戏中虚构AI还要更加夸张。  </p>
+<p>我在上个月还和同学一起谈论过能够独立学习并思考的AI，我当时说：“这样的AI至少要在五十到一百年后才能实现。人类的大脑是世界上最复杂的超级计算机，如果要赋予机器其思考的能力，我想肯定要对神经系统进行深入研究，在目前的技术看来是不可能实现的。”我当时如此断言的原因是因为在2013年，日本的超级计算机“京”经过测试得出结果，每个人脑相当于10的15次方个晶体管，如果让“京”模拟人脑，它需要40分钟才能模拟出人类大脑仅仅用时一秒的活动。现在想想我当时真是太“聪明”了，“聪明”到没有料到人类竟然如此“聪明”，能够如此迅速地制造出能独立思考的AI。  </p>
+<p>AlphaGo从2010年开始研发，到现在才只有五六年的时间，在这短短的五六年就已经强大到了这种地步，实在是令人做梦都难以想象。在二战期间，当时会有谁想到图灵制造的机器竟然能破解德国的、被认为几乎不可能破译的的著名密码系统“英格玛”（Enigma），为盟军夺得了胜利？在1943年国际商业机器公司（International Business Machines Corporation，简称IBM）的董事长托马斯·约翰·沃森(Thomas·John·Watson)曾说：“我想，5台计算机足以满足整个世界市场。”，当时会有谁想到现在计算机已经走进了千家万户？在1946年2月14日，世界上第一台电子计算机埃尼阿克（Eniac）被制造了出来，仅仅用于科学计算，当时会有谁想到现在的计算机的领域已经拓展到了各种方面？人们曾认为机器人永远不可能实现思考，因为程序处理问题的方式和人类有本质上的不同，而现在，2016年3月9日，又会有谁想到AlphaGo能够打败世界围棋最高水平的李世乭；那么如果在未来，又有谁能想象让AI技术继续无限制发展下去会不会掌握人类的创新能力？所以在这里我主张反对AI的发展，应该要对其加以限制。  </p>
+<p>我在与一位同学辩论的时候，他认为我以未来的不可预见性来作为论据，主张反对AI，既是对我自己的观点的证明，更是对我观点的最好反驳，他认为人们也同样无法预见AI的发展和给人类带来的益处，但我不这么认为。<br>未来的不可预见性和我反对AI的发展并不矛盾。在这之前先请想个问题：信息技术（Information Technology，简称IT）的发展是为了什么？答案是为了辅助人类加快在大量信息面前对信息的收集、加工、储存和传播。但是连人类最复杂的游戏——围棋，都能运筹帷幄的AI，无限制发展下去，还有什么东西不能做呢？迟早会有一天它能代替人类！这样不就违背了信息技术发展的初衷吗？变成了AI帮助人处理一切的事情，而不是辅助人类处理信息，那么人类存在的价值又是什么呢？一天吃喝拉撒不想事情，活着又有什么意义？如果AI继续无限制发展，这项技术会把我们人类最宝贵的东西——学习和思考的能力也夺走！  </p>
+<p>从现在因特网（Internet）的发展也不难看出来，虽然给人类生活提供了非常大的便利，但它正在慢慢夺去人类的学习和思考能力，人们用自己有限的精力去面对因特网上巨量的信息，分散了我们的注意力，更限制了我们的思考。自从有了搜索引擎，人们遇到问题不会去动脑子，而是直接进行搜索，得到答案就觉得满足。这飞速发展的信息技术，是在掠夺我们学习和思考的能力！更是在掠夺我们的生存能力！  </p>
+<p>为什么我说飞速发展的IT是在掠夺人们的生存能力呢？我认为，物种之所以能够生存在这个地球上（不考虑环境的改变，只考虑与其他物种的竞争），有三点原因。第一点是关于体能，若生物足够强壮或足够敏捷，就足够强大以面对威胁或能躲避敌害，事实上人类过了这么久的安逸日子，第一点生存能力早就已经丧失殆尽。第二点是关于能否团结互助、分工合作，也就是社会行为，像这一点人类相对于其他生物做的很好，这也是人类为什么能发展到如此强大的地步的原因之一。第三点是关于智力，生物能否利用思考和学习的方式总结出一定经验去面对某些事情，这一点人类相对于其他生物做的也很好。  </p>
+<p>这三点生存能力人类只是失去了一点，但人类还能立足于这个蓝色星球上。但是我无法想象，没有了思考和学习的能力的人类，还有什么资格立足于这个世界！迟早有一天会被淘汰！会被我们亲手制造出来的AI所淘汰！  </p>
+<p>我除了《复仇者联盟2：奥创纪元》（事实上这部电影我只看了不到40分钟）以外从没有看过任何有关机器人妄图取代人类的影视或书籍，所以对于这方面我的思维并没有遭受其他东西的影响。我并不主张AI的发展会导致人类和机器人的战争，因为我认为这样下去，人类连与AI作战的能力都没有。  </p>
+<p>当我从老师那里得知史蒂芬·霍金也主张限制AI发展的时候，我心里感到一丝欣慰。因为第一，在某一方面我的思想和霍金达到了同一高度（当然这句只是玩笑话）；第二，如果霍金都主张限制AI的发展，那么AI的发展一定会受到更多阻力；第三，这让我看到了AI被限制的希望。  </p>
+<p>最后引用一句霍金的话：“人们大多会把高度智能机器概念当成纯粹的科幻，但这是错误的，有可能是历史上最严重的错误。”  </p>
+<p align="right">木糖醇龙之介</p>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/AlphaGo/" rel="tag">#AlphaGo</a>
+          
+            <a href="/tags/人工智能/" rel="tag">#人工智能</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/08/17/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/Pluto.png"
+               alt="MuTangChun" />
+          <p class="site-author-name" itemprop="name">MuTangChun</p>
+          <p class="site-description motion-element" itemprop="description">不批判谁,不附和谁,只将我所看见的呈现,即使与事实有所偏差,但我相信,这仍是有价值的.</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/MuTangChunC" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/5717771335" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Friendship Link
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://coding.net/" title="coding" target="_blank">coding</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MuTangChun</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+
+  
+
+</body>
+</html>

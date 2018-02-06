@@ -1,0 +1,771 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="概率,MOOC," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="概率概论有关概率的名词及意义实验在概率研究中,一个实验(Experiment)包含步骤(Procedure),模型(Model)和观察(Observation).其中步骤表示实验的操作方法,模型则是隐含在实验中的规律,而观察是有针对性的研究在试验中出现的数据.
+结果结果(Outcome)是试验中可能出现的情况.例如在投掷正六面体骰子的试验中,结果有可能是1~6中任意一个点数.
+样本空间样本空间(S">
+<meta property="og:type" content="article">
+<meta property="og:title" content="頑想學概率(更新中)">
+<meta property="og:url" content="http://yoursite.com/2017/06/23/頑想學概率/index.html">
+<meta property="og:site_name" content="MuTangChun's Universe">
+<meta property="og:description" content="概率概论有关概率的名词及意义实验在概率研究中,一个实验(Experiment)包含步骤(Procedure),模型(Model)和观察(Observation).其中步骤表示实验的操作方法,模型则是隐含在实验中的规律,而观察是有针对性的研究在试验中出现的数据.
+结果结果(Outcome)是试验中可能出现的情况.例如在投掷正六面体骰子的试验中,结果有可能是1~6中任意一个点数.
+样本空间样本空间(S">
+<meta property="og:updated_time" content="2017-10-14T03:49:27.180Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="頑想學概率(更新中)">
+<meta name="twitter:description" content="概率概论有关概率的名词及意义实验在概率研究中,一个实验(Experiment)包含步骤(Procedure),模型(Model)和观察(Observation).其中步骤表示实验的操作方法,模型则是隐含在实验中的规律,而观察是有针对性的研究在试验中出现的数据.
+结果结果(Outcome)是试验中可能出现的情况.例如在投掷正六面体骰子的试验中,结果有可能是1~6中任意一个点数.
+样本空间样本空间(S">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6299894756084303000,
+      author: 'MuTangChun'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/06/23/頑想學概率/"/>
+
+  <title> 頑想學概率(更新中) | MuTangChun's Universe </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">MuTangChun's Universe</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Welcome to MuTangChun's World!</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                頑想學概率(更新中)
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-06-23T17:48:35+08:00" content="2017-06-23">
+              2017-06-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/慕课笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">慕课笔记</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="概率概论"><a href="#概率概论" class="headerlink" title="概率概论"></a>概率概论</h1><h2 id="有关概率的名词及意义"><a href="#有关概率的名词及意义" class="headerlink" title="有关概率的名词及意义"></a>有关概率的名词及意义</h2><h3 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h3><p>在概率研究中,一个实验(Experiment)包含步骤(Procedure),模型(Model)和观察(Observation).其中步骤表示实验的操作方法,模型则是隐含在实验中的规律,而观察是有针对性的研究在试验中出现的数据.</p>
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>结果(Outcome)是试验中可能出现的情况.例如在投掷正六面体骰子的试验中,结果有可能是1~6中任意一个点数.</p>
+<h3 id="样本空间"><a href="#样本空间" class="headerlink" title="样本空间"></a>样本空间</h3><p>样本空间(Sample Space)意为概率实验中所有可能的结果的集合,是实验结果的全集,通常用大写字母”S”表示.例如在抛掷硬币的试验中,S={Head,Tail},在画任意小于360°的角的试验中,S=[0°,360°).</p>
+<h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><p>事件(Event)是对实验结果的描述,例如在抽扑克牌的试验中,抽到花色”♥”就是一个事件.在数学上,事件是结果的集合,是样本空间的子集.若某事件一定会发生,则该事件被称为必然事件(Certain Event),而若某事件一定不会发生,则该事件则被称为不可能事件(Impossible Event),两者统称为确定事件.若不能确定某事件是否发生,则该事件被称为随机事件(Random Event).</p>
+<h3 id="事件空间"><a href="#事件空间" class="headerlink" title="事件空间"></a>事件空间</h3><p>事件空间(Event Space)是包含所有事件的集合.若某实验的样本空间有n个结果,则该实验的事件空间有2<sup>n</sup>个结果.举个例子,某同学制定了同学聚会的计划,发起了一次投票,用于了解其他同学的意见.在这种情况下,样本空间S={同意,反对,中立},共有3个元素;事件空间E={ {},{同意},{反对},{中立},{同意,反对},{同意,中立},{反对,中立},{同意,反对,中立} },共有8个元素,恰好等于2<sup>3</sup>.</p>
+<h2 id="理解概率"><a href="#理解概率" class="headerlink" title="理解概率"></a>理解概率</h2><p>概率(Probability)表示某给定事件发生的可能性的大小,数值上大于等于零且小于等于一,即0≤P(A)≤1.若有等式P(A)=n,其中”P”表示计算概率的一个函数,该函数的自变量(Independent Variable)为事件A,而因变量(Dependent Variable)则为数值n.<br>在台大叶丙成老师的MOOC中,引入了一个叫做幸运之轮(Wheel of Fortune)的概念来帮助理解概率.幸运之轮是一个周长为一个单位长度且密度均匀的圆盘,若事件A发生的概率等于n,在圆盘上标记出一长度为n的圆弧(0≤n≤1),则转动轮盘后指针指在所标记圆弧上的可能性与A事件相等,两者为等可能事件.</p>
+<h2 id="事件与概率的联系"><a href="#事件与概率的联系" class="headerlink" title="事件与概率的联系"></a>事件与概率的联系</h2><p>有给定的某事件A,计算其发生的概率P:若有P(A)=1,则A为必然事件;若有P(A)=0,则A为不可能事件;若0&lt;P(A)&lt;1,则A为随机事件.</p>
+<h2 id="研究概率的意义"><a href="#研究概率的意义" class="headerlink" title="研究概率的意义"></a>研究概率的意义</h2><p>大多数的事件都是随机的(Random),并非必然的(Deterministic),由于知识的有限,我们无法完全了解到事物运行的规律,也没有足够的资源可以支持庞大且复杂的运算,就需要通过概率去估测某事件发生的可能性.</p>
+<h2 id="概率与统计的区别与联系"><a href="#概率与统计的区别与联系" class="headerlink" title="概率与统计的区别与联系"></a>概率与统计的区别与联系</h2><p>统计研究的是大量特殊的数据,试图通过此结果来得到一般规律.而概率研究的是某事件的本质,需要大量统计数据的支持.</p>
+<hr>
+<h1 id="集合论"><a href="#集合论" class="headerlink" title="集合论"></a>集合论</h1><h2 id="有关集合的名词及意义"><a href="#有关集合的名词及意义" class="headerlink" title="有关集合的名词及意义"></a>有关集合的名词及意义</h2><h3 id="元素与集合"><a href="#元素与集合" class="headerlink" title="元素与集合"></a>元素与集合</h3><p>一般地,我们把研究对象(Object)统称为元素(Element),把一些元素组成的总体叫做集合(Set).</p>
+<h3 id="全集与空集"><a href="#全集与空集" class="headerlink" title="全集与空集"></a>全集与空集</h3><p>所有的研究对象的集合称为全集(Universal Set),通常用大写英文字母”U”或”S”表示;若某个集合没有任何的元素,则称此集合为空集(Empty Set),用符号”∅”表示.</p>
+<h3 id="交集与并集"><a href="#交集与并集" class="headerlink" title="交集与并集"></a>交集与并集</h3><p>交集(Intersection)表示两个集合重复的元素的集合,用符号”∩”表示,并集(Union)表示两个集合元素之和的集合,用符号”∪”表示.</p>
+<h3 id="差集"><a href="#差集" class="headerlink" title="差集"></a>差集</h3><p>在集合A中且不在集合B中所有元素的集合被称为A与B的差集,用数学语言表示为A-B或A∩(∁<sub>U</sub>B)</p>
+<h3 id="补集"><a href="#补集" class="headerlink" title="补集"></a>补集</h3><p>若全集U与集合A的差集等于集合B,则称B为A的补集(Complement),用数学语言表示为B=∁<sub>U</sub>A</p>
+<h3 id="子集"><a href="#子集" class="headerlink" title="子集"></a>子集</h3><p>若集合A属于集合B,即集合A中的所有元素都存在于集合B中,则称前者为后者的子集(Subset),用数学语言表示为A⊆B.</p>
+<h3 id="不相交与互斥"><a href="#不相交与互斥" class="headerlink" title="不相交与互斥"></a>不相交与互斥</h3><p>A∩B=∅⇔x,y不相交(Disjoint).若在一群集合X<sub>1</sub>,X<sub>2</sub>,…X<sub>n</sub>,任选两集合X<sub>i</sub>,X<sub>j</sub>,有X<sub>i</sub>∩X<sub>j</sub>=∅,则称这组集合互斥(Mutually Exclusive).</p>
+<h2 id="德摩根定理与证明"><a href="#德摩根定理与证明" class="headerlink" title="德摩根定理与证明"></a>德摩根定理与证明</h2><p>德摩根定理(De Morgan’s Law):在全集U中,A并集B的补集等于A的补集交集B的补集.用数学语言表示为:∁<sub>U</sub>(A∪B)=∁<sub>U</sub>A∩∁<sub>U</sub>B<br>证明思路:证明两集合互相从属,你中有我我中有你,即:A⊆B and A⊇B⇒A=B.<br>证明过程:</p>
+<blockquote>
+<p>→:<br>Assume x∈∁<sub>U</sub>(A∪B)<br>⇒x∉A∪B<br>⇒x∉A and x∉B<br>⇒x∈∁<sub>U</sub>A and x∈∁<sub>U</sub>B<br>⇒x∈∁<sub>U</sub>A∩∁<sub>U</sub>B<br>⇒∁<sub>U</sub>(A∪B)⊆∁<sub>U</sub>A∩∁<sub>U</sub>B<br>←:<br>Assume x∈∁<sub>U</sub>A∩∁<sub>U</sub>B<br>⇒x∉A and x∉B<br>If x∉∁<sub>U</sub>(A∪B)<br>⇒x∈A∪B<br>⇒x∈A or x∈B →←<br>Thus x∈∁<sub>U</sub>(A∪B)<br>⇒∁<sub>U</sub>A∩∁<sub>U</sub>B⊆∁<sub>U</sub>(A∪B)<br>Thus ∁<sub>U</sub>(A∪B)=∁<sub>U</sub>A∩∁<sub>U</sub>B</p>
+</blockquote>
+<h2 id="布尔代数与集合论"><a href="#布尔代数与集合论" class="headerlink" title="布尔代数与集合论"></a>布尔代数与集合论</h2><h3 id="什么是布尔代数"><a href="#什么是布尔代数" class="headerlink" title="什么是布尔代数"></a>什么是布尔代数</h3><p>布尔代数(Boole’s Algebra)是一种以数学描述逻辑学的方式,由英国人乔治·布尔(George Boole)发明.</p>
+<h3 id="布尔代数与传统代数"><a href="#布尔代数与传统代数" class="headerlink" title="布尔代数与传统代数"></a>布尔代数与传统代数</h3><p>传统代数的操作数(Operand)为数字,但布尔代数的操作数为类(Class),类就是某些事物的群体,也被称作集合.传统代数用”×”和”+”来表示乘(Multiply)与加(Add),而布尔代数用这两个符号来表示交集与并集运算.传统代数与布尔逻辑代数都遵守以下规律:</p>
+<ol>
+<li>交换律(Commutative):A+B=B+A,A×B=B×A;</li>
+<li>结合律(Associative):A+(B+C)=(A+B)+C,A×(B×C)=(A×B)×C;</li>
+<li>分配律(Distributive):A×(B+C)=(A×B)+(A×C).</li>
+</ol>
+<h3 id="布尔代数特性"><a href="#布尔代数特性" class="headerlink" title="布尔代数特性"></a>布尔代数特性</h3><p>在布尔代数中,一般使用数字1表示全集,数字0表示空集.同样,这两个数字可以表示真(True)和假(False).<br>在布尔代数中,符号”+”表示并集运算,相当于逻辑或(Or);符号”×”表示交集运算,相当于逻辑与”And”;而在操作数的前方写上”1-“,则意为在全集中去掉此操作数中的元素,有时也用在操作数上写上划线来表示(例如<span style="text-decoration:overline">A</span>就表示在全集中去除A集合中的元素),相当于逻辑非(Not).</p>
+<h3 id="布尔代数的运用"><a href="#布尔代数的运用" class="headerlink" title="布尔代数的运用"></a>布尔代数的运用</h3><p>此处将会通过布尔代数来描述以下在逻辑学上极为经典的三段式的演绎论证(Deductive Argument),来展示布尔代数的使用方法.</p>
+<blockquote>
+<p>所有人都难逃一死(条件1).<br>苏格拉底是人(条件2).<br>因此,苏格拉底必有一死(结论).</p>
+</blockquote>
+<p>证明过程:</p>
+<blockquote>
+<p>设P为所有人的集合,M为必有一死的事物的集合,S表示苏格拉底的集合<br>∵所有人都难逃一死<br>∴P×M=P⇒P=P×M①<br>∵苏格拉底是人<br>∴S×P=S②<br>将①代入②有<br>S×(P×M)=S⇒(S×P)×M=S<br>又∵S×P=S<br>∴S×M=S<br>∴苏格拉底必有一死</p>
+</blockquote>
+<hr>
+<h1 id="概率公理及推论"><a href="#概率公理及推论" class="headerlink" title="概率公理及推论"></a>概率公理及推论</h1><h2 id="概率公理"><a href="#概率公理" class="headerlink" title="概率公理"></a>概率公理</h2><p>公理(Axiom)是基本事实,是无法被证明也不需要被证明的命题,很多学科就是依据着几条很基本的公理发展起来的,例如几何学,逻辑学等.概率的研究基于以下三条公理,被称为概率三公理(Axioms Of Probability):</p>
+<ol>
+<li>对任何事件A而言,P(A)≥0.</li>
+<li>P(S)=1.</li>
+<li>事件A<sub>1</sub>,A<sub>2</sub>,…,A<sub>n</sub>互斥⇒P(A<sub>1</sub>∪A<sub>2</sub>∪…∪A<sub>n</sub>)=P(A<sub>1</sub>)+P(A<sub>2</sub>)+…+P(A<sub>n</sub>).</li>
+</ol>
+<h2 id="性质及推论"><a href="#性质及推论" class="headerlink" title="性质及推论"></a>性质及推论</h2><h3 id="推论一"><a href="#推论一" class="headerlink" title="推论一"></a>推论一</h3><p>若E={o<sub>1</sub>,o<sub>2</sub>,…,o<sub>n</sub>}<br>则P(E)=P({o<sub>1</sub>})+p({o<sub>2</sub>})+…+P({o<sub>n</sub>})<br>证明过程(依据公理3):</p>
+<blockquote>
+<p>E={o<sub>1</sub>}∪{o<sub>2</sub>}∪…∪{o<sub>n</sub>}<br>∵{o<sub>1</sub>},{o<sub>2</sub>},…,{o<sub>n</sub>}互斥<br>∴P(E)=P({o<sub>1</sub>})+p({o<sub>2</sub>})+…+P({o<sub>n</sub>})</p>
+</blockquote>
+<h3 id="推论二"><a href="#推论二" class="headerlink" title="推论二"></a>推论二</h3><p>P(∅)=0<br>证明过程(依据公理2,3):</p>
+<blockquote>
+<p>S∩∅=∅⇒S,∅互斥<br>且S=S∪∅<br>⇒P(S)=P(S∪∅)=P(S)+P(∅)<br>⇒P(∅)=0</p>
+</blockquote>
+<h3 id="推论三"><a href="#推论三" class="headerlink" title="推论三"></a>推论三</h3><p>P(A)=1-P∁<sub>U</sub>A<br>证明过程(依据公理2,3):</p>
+<blockquote>
+<p>A∩∁<sub>U</sub>A=∅⇒A,∁<sub>U</sub>A互斥<br>且S=A∪∁<sub>U</sub>A<br>⇒P(S)=P(A)+P(∁<sub>U</sub>A)<br>⇒P(A)=1-P(∁<sub>U</sub>A)</p>
+</blockquote>
+<h3 id="推论四"><a href="#推论四" class="headerlink" title="推论四"></a>推论四</h3><p>P(A)=P(A-B)+P(A∩B)<br>证明过程(依据公理3):</p>
+<blockquote>
+<p>A=(A-B)∪(A∩B)且A-B,A∩B互斥<br>P(A)=P(A-B)+P(A∩B)</p>
+</blockquote>
+<h3 id="上次修改到这里↑"><a href="#上次修改到这里↑" class="headerlink" title="上次修改到这里↑"></a>上次修改到这里↑</h3><h3 id="推论五"><a href="#推论五" class="headerlink" title="推论五"></a>推论五</h3><p>P(A∪B)=P(A)+P(B)-P(A∩B)<br>证明过程(依据公理3):</p>
+<blockquote>
+<p>P(A∪B)=P(A-B)＋P(A∩B)+P(B-A)<br>⇒P(A∪B)=P(A)+P(B)-P(A∩B)</p>
+</blockquote>
+<h3 id="推论六"><a href="#推论六" class="headerlink" title="推论六"></a>推论六</h3><p>若C<sub>1</sub>,C<sub>2</sub>,…,C<sub>n</sub>互斥且C<sub>1</sub>∪C<sub>2</sub>∪…∪C<sub>n</sub>=S<br>则对任何事件A有:P(A)=P(A∩C<sub>1</sub>)+P(A∩C<sub>2</sub>)+…+P(A∩C<sub>n</sub>)<br>证明过程(依据公理3):</p>
+<blockquote>
+<p>∵C<sub>1</sub>,C<sub>2</sub>,…,C<sub>n</sub>互斥<br>∴A∩C<sub>1</sub>,A∩C<sub>2</sub>,…A∩C<sub>n</sub>互斥<br>又∵C<sub>1</sub>+C<sub>2</sub>+…+C<sub>n</sub>=S<br>∴A∈C<sub>1</sub>∪C<sub>2</sub>∪…∪C<sub>n</sub><br>∴P(A)=P(A∩C<sub>1</sub>)+P(A∩C<sub>2</sub>)+…+P(A∩C<sub>n</sub>)</p>
+</blockquote>
+<h3 id="推论七"><a href="#推论七" class="headerlink" title="推论七"></a>推论七</h3><p>若A∈B,则P(A)≤P(B)<br>证明过程(依据公理1,3):</p>
+<blockquote>
+<p>∵A∈B<br>∴A与B-A互斥<br>∴P(B)=P(A)+P(B-A)⇒P(B)-P(A)=P(B-A)<br>又∵P(B-A)≥0<br>∴P(B)-P(A)≥0⇒P(A)≤P(B)</p>
+</blockquote>
+<h3 id="推论八"><a href="#推论八" class="headerlink" title="推论八"></a>推论八</h3><p>布尔不等式(Boole’s Inequality):对任意n个事件A<sub>1</sub>,A<sub>2</sub>,…,A<sub>n</sub>而言,P(∪<sup>n</sup><sub style="margin:0 0 0-5px;">i=1</sub>A<sub>i</sub>)≤∑<sup>n</sup><sub style="margin:0 0 0-5px;">i=1</sub>P(A<sub>i</sub>)</p>
+<h3 id="推论九"><a href="#推论九" class="headerlink" title="推论九"></a>推论九</h3><p>邦费罗尼不等式(Bonferroni’s Inequality):对任意n个事件A<sub>1</sub>,A<sub>2</sub>,…,A<sub>n</sub>而言,P(∩<sup>n</sup><sub style="margin:0 0 0-5px;">i=1</sub>A<sub>i</sub>)≥1-∑<sup>n</sup><sub style="margin:0 0 0-5px;">i=1</sub>P(A<sup>c</sup><sub style="margin:0 0 0-5px;">i</sub>)</p>
+<hr>
+<h1 id="条件概率"><a href="#条件概率" class="headerlink" title="条件概率"></a>条件概率</h1><h2 id="什么是条件概率"><a href="#什么是条件概率" class="headerlink" title="什么是条件概率"></a>什么是条件概率</h2><p>条件概率(Conditional Probability)指A事件在另一事件B已经发生后的概率.当某事件发生时,此事件虽然未直接说明实验结果是什么,但因为此事件的发生,我们对此次试验了解到了一些新的信息,实验结果的范围出现一定的变化,原来的概率也发生了一定的改变.</p>
+<h2 id="条件概率的表示方法"><a href="#条件概率的表示方法" class="headerlink" title="条件概率的表示方法"></a>条件概率的表示方法</h2><p>条件概率用数学语言表示为P(X|Y),其中X表示实验过程中所关注的事件,Y表示观察到可作为条件的已发生的事件.比如,在一次猜骰子点数的游戏中,小明猜数字5为朝上,他猜中的概率P(5)=1/6,但如果小刚偷看了骰到的点数为奇数(Ood),并告诉了小明,在此条件下可以确定,小明猜中的概率发生了一定改变,P(5|Ood)=1/3.(此例子中,在骰子停止滚动的那一瞬间,点数已经决定,小明的猜想只有真假之分,但由于小明对此次实验所掌握的信息较少,就只能用概率来估测点数5出现的可能性,虽然这种行为对于了解骰子可能出现的点数有一定帮助,但并不能改变既定的事实)</p>
+<h2 id="条件概率的有关计算"><a href="#条件概率的有关计算" class="headerlink" title="条件概率的有关计算"></a>条件概率的有关计算</h2><p>在上文的例子中,小明没有得知任何信息时,样本空间S={1,2,3,4,5,6},小刚告诉小明骰子点数为单数后,新的样本空间S’={1,3,5},不存在偶数(Even)的实验结果,则P(Even)=0.无论此小明是否了解到点数为奇,奇数各点发生的几率都一样,所以P(1|Ood):P(3|Ood):P(5|Ood)=P(1):P(3):P(5).在小明了解到点数为奇后,样本空间的范围缩小,有P(Ood)=P(1|Ood)+P(3|Ood)+P(5|Ood)=1.通过以上两个等式可以得出P(5|Ood)=P(5):P(1∪3∪5)=P(5):P(Ood).<br>总之,若某实验结果o<sub>i</sub>与某条件Y无交集,则有P(o<sub>i</sub>|Y)=0.若某条件Y={o<sub>1</sub>,o<sub>2</sub>,…,o<sub>n</sub>},则有$$P(o_i|Y)=\frac{P(o_i)}{P(o_1)+P(o_2)+…+P(o_n)}=\frac{P(o_i)}{P(Y)}$$<br>若已知某条件事件Y发生了,则对任何事件X有$$P(X|Y)=\frac{P(X \cap Y)}{P(Y)}$$</p>
+<h2 id="条件概率的性质"><a href="#条件概率的性质" class="headerlink" title="条件概率的性质"></a>条件概率的性质</h2><p>对任何事件X及任何条件事件Y,有:</p>
+<ol>
+<li>$$P(X|Y)=\frac{P(X\cap Y)}{P(Y)}\ge0$$</li>
+<li>$$P(Y|Y)=\frac{P(Y\cap Y)}{P(Y)}=\frac{P(Y)}{P(Y)}=1$$</li>
+<li>$$A\ and\ B\ are\ Mutually\ Exclusive⇒P(A\cup B|Y)=\frac{P(A)}{P(Y)}+\frac{P(B)}{P(Y)}=P(A|Y)+P(B|Y)$$</li>
+</ol>
+<h2 id="有关条件概率的公式"><a href="#有关条件概率的公式" class="headerlink" title="有关条件概率的公式"></a>有关条件概率的公式</h2><h3 id="全概率公式"><a href="#全概率公式" class="headerlink" title="全概率公式"></a>全概率公式</h3><p>全概率公式(Total Probability Theorem):若C<sub>1</sub>,C<sub>2</sub>,…,C<sub>n</sub>互斥且C<sub>1</sub>∪C<sub>2</sub>∪…∪C<sub>n</sub>=S,则对任意事件A有:<br>$$P(A)=\sum_{i=1}^nP(A|C_i)P(C_i)$$</p>
+<h3 id="贝叶斯公式"><a href="#贝叶斯公式" class="headerlink" title="贝叶斯公式"></a>贝叶斯公式</h3><p>贝叶斯公式(Bayes Rule):若C<sub>1</sub>,C<sub>2</sub>,…,C<sub>n</sub>互斥且C<sub>1</sub>∪C<sub>2</sub>∪…∪C<sub>n</sub>=S,则对任意事件A有:<br>$$P(C_i|A)=\frac{P(A|C_i)P(C_i)}{P(A|C_1)P(C_1)+P(A|C_2)P(C_2)+…+P(A|C_n)P(C_n)}$$</p>
+<hr>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/概率/" rel="tag">#概率</a>
+          
+            <a href="/tags/MOOC/" rel="tag">#MOOC</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/06/18/An Illustrated Book of Bad Arguments/" rel="next" title="An Illustrated Book of Bad Arguments（更新中）">
+                <i class="fa fa-chevron-left"></i> An Illustrated Book of Bad Arguments（更新中）
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/02/06/Sams-Teach-Yourself-HTML-CSS-JavaScript-Web-Publishing/" rel="prev" title="Sams Teach Yourself HTML, CSS & JavaScript Web Publishing">
+                Sams Teach Yourself HTML, CSS & JavaScript Web Publishing <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/Pluto.png"
+               alt="MuTangChun" />
+          <p class="site-author-name" itemprop="name">MuTangChun</p>
+          <p class="site-description motion-element" itemprop="description">不批判谁,不附和谁,只将我所看见的呈现,即使与事实有所偏差,但我相信,这仍是有价值的.</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/MuTangChunC" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/5717771335" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Friendship Link
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://coding.net/" title="coding" target="_blank">coding</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概率概论"><span class="nav-number">1.</span> <span class="nav-text">概率概论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#有关概率的名词及意义"><span class="nav-number">1.1.</span> <span class="nav-text">有关概率的名词及意义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实验"><span class="nav-number">1.1.1.</span> <span class="nav-text">实验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结果"><span class="nav-number">1.1.2.</span> <span class="nav-text">结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#样本空间"><span class="nav-number">1.1.3.</span> <span class="nav-text">样本空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件"><span class="nav-number">1.1.4.</span> <span class="nav-text">事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事件空间"><span class="nav-number">1.1.5.</span> <span class="nav-text">事件空间</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#理解概率"><span class="nav-number">1.2.</span> <span class="nav-text">理解概率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件与概率的联系"><span class="nav-number">1.3.</span> <span class="nav-text">事件与概率的联系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#研究概率的意义"><span class="nav-number">1.4.</span> <span class="nav-text">研究概率的意义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#概率与统计的区别与联系"><span class="nav-number">1.5.</span> <span class="nav-text">概率与统计的区别与联系</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#集合论"><span class="nav-number">2.</span> <span class="nav-text">集合论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#有关集合的名词及意义"><span class="nav-number">2.1.</span> <span class="nav-text">有关集合的名词及意义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#元素与集合"><span class="nav-number">2.1.1.</span> <span class="nav-text">元素与集合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#全集与空集"><span class="nav-number">2.1.2.</span> <span class="nav-text">全集与空集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#交集与并集"><span class="nav-number">2.1.3.</span> <span class="nav-text">交集与并集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#差集"><span class="nav-number">2.1.4.</span> <span class="nav-text">差集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#补集"><span class="nav-number">2.1.5.</span> <span class="nav-text">补集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子集"><span class="nav-number">2.1.6.</span> <span class="nav-text">子集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不相交与互斥"><span class="nav-number">2.1.7.</span> <span class="nav-text">不相交与互斥</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#德摩根定理与证明"><span class="nav-number">2.2.</span> <span class="nav-text">德摩根定理与证明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布尔代数与集合论"><span class="nav-number">2.3.</span> <span class="nav-text">布尔代数与集合论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是布尔代数"><span class="nav-number">2.3.1.</span> <span class="nav-text">什么是布尔代数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#布尔代数与传统代数"><span class="nav-number">2.3.2.</span> <span class="nav-text">布尔代数与传统代数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#布尔代数特性"><span class="nav-number">2.3.3.</span> <span class="nav-text">布尔代数特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#布尔代数的运用"><span class="nav-number">2.3.4.</span> <span class="nav-text">布尔代数的运用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#概率公理及推论"><span class="nav-number">3.</span> <span class="nav-text">概率公理及推论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概率公理"><span class="nav-number">3.1.</span> <span class="nav-text">概率公理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#性质及推论"><span class="nav-number">3.2.</span> <span class="nav-text">性质及推论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#推论一"><span class="nav-number">3.2.1.</span> <span class="nav-text">推论一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推论二"><span class="nav-number">3.2.2.</span> <span class="nav-text">推论二</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推论三"><span class="nav-number">3.2.3.</span> <span class="nav-text">推论三</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推论四"><span class="nav-number">3.2.4.</span> <span class="nav-text">推论四</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上次修改到这里↑"><span class="nav-number">3.2.5.</span> <span class="nav-text">上次修改到这里↑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推论五"><span class="nav-number">3.2.6.</span> <span class="nav-text">推论五</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推论六"><span class="nav-number">3.2.7.</span> <span class="nav-text">推论六</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推论七"><span class="nav-number">3.2.8.</span> <span class="nav-text">推论七</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推论八"><span class="nav-number">3.2.9.</span> <span class="nav-text">推论八</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推论九"><span class="nav-number">3.2.10.</span> <span class="nav-text">推论九</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#条件概率"><span class="nav-number">4.</span> <span class="nav-text">条件概率</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是条件概率"><span class="nav-number">4.1.</span> <span class="nav-text">什么是条件概率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#条件概率的表示方法"><span class="nav-number">4.2.</span> <span class="nav-text">条件概率的表示方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#条件概率的有关计算"><span class="nav-number">4.3.</span> <span class="nav-text">条件概率的有关计算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#条件概率的性质"><span class="nav-number">4.4.</span> <span class="nav-text">条件概率的性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有关条件概率的公式"><span class="nav-number">4.5.</span> <span class="nav-text">有关条件概率的公式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#全概率公式"><span class="nav-number">4.5.1.</span> <span class="nav-text">全概率公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#贝叶斯公式"><span class="nav-number">4.5.2.</span> <span class="nav-text">贝叶斯公式</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">MuTangChun</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+
+  
+
+</body>
+</html>
